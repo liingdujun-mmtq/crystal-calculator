@@ -43,4 +43,4 @@ The list of used module is here:
 * PIL (for linux/mac)
 
 ## Acknowledgements
-Thanks for the testing and support from University of Science and Technology Beijing (USTB, Beijing, China) and HEfei University of Technology (HFUT, Hefei, China).
+Thanks for the testing and support from University of Science and Technology Beijing (USTB, Beijing, China) and Hefei University of Technology (HFUT, Hefei, China).
