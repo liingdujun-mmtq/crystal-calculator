@@ -22,7 +22,8 @@ Note: The result is shown in the unit of degree rather than rad.
 
 ## Release
 
-You can download a exe file build for windows system at release page.
+#### Windows user
+You can download a exe file build for windows system at [release page](https://github.com/liingdujun-mmtq/crystal-calculator/releases/tag/release).
 
 #### System compatibility
 Works on：
@@ -31,3 +32,12 @@ Works on：
 + Windows 7 SP1 32bit (need KB2533623 update)
 
 * For win7/8 user: If *.dll lost, you may need install [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+
+#### Other user
+If the all used module has been installed, you can execute the py file directly.
+
+Note: Crystal_calculator_linux_mac.py is recommended for use in Linux/Mac 
+
+The list of used module is here:
+* numpy
+* PIL (for linux/mac)
