@@ -41,3 +41,6 @@ Note: Crystal_calculator_linux_mac.py is recommended for use in Linux/Mac
 The list of used module is here:
 * numpy
 * PIL (for linux/mac)
+
+## Acknowledgements
+Thanks for the testing and support from University of Science and Technology Beijing (USTB, Beijing, China) and HEfei University of Technology (HFUT, Hefei, China).
