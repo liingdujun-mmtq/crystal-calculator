@@ -106,7 +106,7 @@ def d_window():
 
 def main_window():
     root=tk.Tk()
-    root.title('Crystal calculator v1.2 by LingDuJun')
+    root.title('Crystal calculator v1.22 by LingDuJun')
     with open('logo_tmp.ico','wb') as tmp:
         tmp.write(base64.b64decode(Icon().img))
     root.iconbitmap('logo_tmp.ico')

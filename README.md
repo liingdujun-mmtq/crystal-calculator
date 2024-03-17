@@ -25,13 +25,17 @@ Note: The result is shown in the unit of degree rather than rad.
 #### Windows user
 You can download a exe file build for windows system at [release page](https://github.com/liingdujun-mmtq/crystal-calculator/releases/tag/release).
 
-#### System compatibility
+##### System compatibility
 Works on：
 + Windows 10 2004 64bit
 + Windows 8.1 64 bit
 + Windows 7 SP1 32bit (need KB2533623 update)
 
 * For win7/8 user: If *.dll lost, you may need install [Visual C++ Redistributable for Visual Studio 2015](https://www.microsoft.com/en-us/download/details.aspx?id=48145)
+
+##### Note for the different exe
+Exe file with "nuitka" in filename is packed using nuitka, which was not full tested in this APP now.
+Exe file without "nuitka" is packed using pyinstaller, which is full tested.
 
 #### Other user
 If the all used module has been installed, you can execute the py file directly.
