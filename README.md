@@ -23,7 +23,7 @@ Note: The result is shown in the unit of degree rather than rad.
 ## Release
 
 #### Windows user
-You can download a exe file build for windows system at [release page](https://github.com/liingdujun-mmtq/crystal-calculator/releases/tag/release).
+You can download a exe file build for windows system at [release page](https://github.com/liingdujun-mmtq/crystal-calculator/releases).
 
 ##### System compatibility
 Works on：
