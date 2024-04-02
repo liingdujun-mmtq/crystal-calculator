@@ -1,6 +1,6 @@
 ## Release Note
 
-#### v1.2.2
+#### v1.2.3
 Bug fix: Crashed while calculating angles (due to incorrect use of math.acos)
 
 #### v1.2.2
