@@ -1,1 +1,1 @@
-nuitka --standalone --onefile --enable-plugin=tk-inter --remove-output --windows-disable-console --windows-icon-from-ico=logo.ico .\Crystal_calculator_1.22_win.py
+nuitka --standalone --enable-plugin=tk-inter --remove-output --windows-disable-console --windows-icon-from-ico=logo.ico .\Crystal_calculator_win.py
