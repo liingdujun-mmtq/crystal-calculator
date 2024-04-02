@@ -106,7 +106,7 @@ def d_window():
 
 def main_window():
     root=tk.Tk()
-    root.title('Crystal calculator v1.22 by LingDuJun')
+    root.title('Crystal calculator v1.23 by LingDuJun')
     with open('logo_tmp.ico','wb') as tmp:
         tmp.write(base64.b64decode(Icon().img))
     root.iconbitmap('logo_tmp.ico')
@@ -224,7 +224,7 @@ def main_window():
             S23=res1[6]
             V=res1[7]
             cos_theta=(S11*h1*h2+S22*k1*k2+S33*l1*l2+S23*(k1*l2+k2*l1)+S13*(l1*h2+l2*h1)+S12*(h1*k2+h2*k1))*d1*d2/V**2
-            theta=math.arccos(cos_theta)/math.pi*180
+            theta=math.acos(cos_theta)/math.pi*180
             Show_theta.delete(0, END)
             Show_theta.insert(0, "%4.2f°" %(theta))
 
