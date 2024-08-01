@@ -62,8 +62,11 @@ If the all used module has been installed, you can execute the py file directly.
 如果所有的module都被安装，则py文件可以直接执行
 
 The list of used module is here/所需的module列表:
-* numpy (removed in 1.23+)
-* PIL (for linux/mac)
+* PIL (for linux)
+
+注意：macos用户需需要升级默认python3以避免tk的bug
+
+Note: Please upgrade python3 for macos user due to the bugs in tk on python3.9
 
 ## Acknowledgements/致谢
 Thanks for the testing and support from University of Science and Technology Beijing (USTB, Beijing, China) and Hefei University of Technology (HFUT, Hefei, China).
