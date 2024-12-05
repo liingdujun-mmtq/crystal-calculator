@@ -96,17 +96,20 @@ def d_window():
             outputmessage.append(i)
     MessageBox.insert(END, "Crystal calculator by LingDuJun \n")
     MessageBox.insert(END, "================================================= \n")
-    init_message="Latice: a=%.3f b=%.3f c=%.3f alpha=%.2f° beta=%.2f° gamma=%.2f° \n" %(a,b,c,alpha,beta,gamma)
-    MessageBox.insert(END, init_message)
+    phase_message="Phase: %s \n" %(phasename)
+    MessageBox.insert(END, phase_message)
+    lattice_message="Latice: a=%.3f b=%.3f c=%.3f alpha=%.2f° beta=%.2f° gamma=%.2f° \n" %(a,b,c,alpha,beta,gamma)
+    MessageBox.insert(END, lattice_message)
     MessageBox.insert(END, "================================================= \n")
     MessageBox.insert(END,"( h, k, l), d=      , d*=     \n")
+    MessageBox.insert(END, "================================================= \n")
     for i in outputmessage:
         MessageBox.insert(END,"(%2d,%2d,%2d), d= %5.3f, d*=%5.3f \n" %(i[0],i[1],i[2],i[3],i[4]))
 
 
 def main_window():
     root=tk.Tk()
-    root.title('Crystal calculator v1.23 by LingDuJun')
+    root.title('Crystal calculator v1.24 by LingDuJun')
     with open('logo_tmp.ico','wb') as tmp:
         tmp.write(base64.b64decode(Icon().img))
     root.iconbitmap('logo_tmp.ico')
@@ -114,41 +117,46 @@ def main_window():
     # hkl
     set_hkl=tk.Frame(root)
     set_hkl.pack(anchor='w')
-    tk.Label(set_hkl,text="").grid(row=0,column=0,columnspan=3,sticky="w")
+
+    tk.Label(set_hkl,text="").grid(row=1,column=0,columnspan=3,sticky="w")
     
-    tk.Label(set_hkl,text="Set H1 K1 L1:").grid(row=1,column=0,columnspan=3,sticky="w")
-    tk.Label(set_hkl,text="Theta:",width=8).grid(row=1,column=4,sticky="w")
+    tk.Label(set_hkl,text="Set H1 K1 L1:").grid(row=2,column=0,columnspan=3,sticky="w")
+    tk.Label(set_hkl,text="Theta:",width=8).grid(row=2,column=4,sticky="w")
     Show_theta=tk.Entry(set_hkl,textvariable=tk.StringVar(root,value="0.00"),width=10,justify='right')
-    Show_theta.grid(row=1,column=5,sticky="w")
+    Show_theta.grid(row=2,column=5,sticky="w")
 
-    tk.Label(set_hkl,text="H1:",width=8).grid(row=2,column=0)
+    tk.Label(set_hkl,text="H1:",width=8).grid(row=3,column=0)
     H1=tk.Entry(set_hkl,textvariable=tk.StringVar(root,value="1"),width=10,justify='right')
-    H1.grid(row=2,column=1)
-    tk.Label(set_hkl,text="K1:",width=8).grid(row=2,column=2)
+    H1.grid(row=3,column=1)
+    tk.Label(set_hkl,text="K1:",width=8).grid(row=3,column=2)
     K1=tk.Entry(set_hkl,textvariable=tk.StringVar(root,value="0"),width=10,justify='right')
-    K1.grid(row=2,column=3)
-    tk.Label(set_hkl,text="L1:",width=8).grid(row=2,column=4)
+    K1.grid(row=3,column=3)
+    tk.Label(set_hkl,text="L1:",width=8).grid(row=3,column=4)
     L1=tk.Entry(set_hkl,textvariable=tk.StringVar(root,value="0"),width=10,justify='right')
-    L1.grid(row=2,column=5)
+    L1.grid(row=3,column=5)
 
-    tk.Label(set_hkl,text="Set H2 K2 L2:").grid(row=3,column=0,columnspan=3,sticky="w")
+    tk.Label(set_hkl,text="Set H2 K2 L2:").grid(row=4,column=0,columnspan=3,sticky="w")
 
-    tk.Label(set_hkl,text="H2:",width=8).grid(row=4,column=0)
+    tk.Label(set_hkl,text="H2:",width=8).grid(row=5,column=0)
     H2=tk.Entry(set_hkl,textvariable=tk.StringVar(root,value="1"),width=10,justify='right')
-    H2.grid(row=4,column=1)
-    tk.Label(set_hkl,text="K2:",width=8).grid(row=4,column=2)
+    H2.grid(row=5,column=1)
+    tk.Label(set_hkl,text="K2:",width=8).grid(row=5,column=2)
     K2=tk.Entry(set_hkl,textvariable=tk.StringVar(root,value="0"),width=10,justify='right')
-    K2.grid(row=4,column=3)
-    tk.Label(set_hkl,text="L2:",width=8).grid(row=4,column=4)
+    K2.grid(row=5,column=3)
+    tk.Label(set_hkl,text="L2:",width=8).grid(row=5,column=4)
     L2=tk.Entry(set_hkl,textvariable=tk.StringVar(root,value="0"),width=10,justify='right')
-    L2.grid(row=4,column=5)
+    L2.grid(row=5,column=5)
     
-    tk.Label(set_hkl,text="",width=2).grid(row=4,column=6,sticky="w")
-    tk.Label(set_hkl,text="").grid(row=5,column=0,columnspan=3,sticky="w")
+    tk.Label(set_hkl,text="",width=2).grid(row=5,column=6,sticky="w")
+    tk.Label(set_hkl,text="").grid(row=6,column=0,columnspan=3,sticky="w")
 
     # abc
     set_abc=tk.Frame(root)
     set_abc.pack(anchor='w')
+    tk.Label(set_abc,text="Phase:").grid(row=0,column=0,columnspan=3,sticky="w")
+    Phase=tk.Entry(set_abc,textvariable=tk.StringVar(root,value="Alpha-Fe"),width=10,justify='right')
+    Phase.grid(row=0,column=1)
+
     tk.Label(set_abc,text="Set abcαβγ:").grid(row=1,column=0,columnspan=3,sticky="w")
     
     tk.Label(set_abc,text="a:",width=8).grid(row=2,column=0)
@@ -172,6 +180,8 @@ def main_window():
     tk.Label(set_abc,text="").grid(row=4,column=0,columnspan=3,sticky="w")
 
     def get_data():
+        global phasename
+        phasename=Phase.get()
         global a
         a=float(RemoveNoNumberd(A.get()))
         global b
