@@ -36,6 +36,16 @@ Note: The result is shown in the unit of degree rather than rad.
 
 ## Release/发行版
 
+## Note for Gitee user
+
+如果在Gitee发行版页面中找不到任何下载文件，请使在Github Release Page (https://github.com/liingdujun-mmtq/crystal-calculator/releases)
+
+或者百度网盘(https://pan.baidu.com/s/1qW93iU0sl104gmArflkt0g?pwd=1234)
+
+If you can not fint any release in Gitee Release Page, Download from Github release page (https://github.com/liingdujun-mmtq/crystal-calculator/releases)
+
+or Baidu Netdisk (https://pan.baidu.com/s/1qW93iU0sl104gmArflkt0g?pwd=1234)
+
 #### Windows user
 You can download a exe file build for windows system at Release Page.
 
